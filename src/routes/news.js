@@ -5,12 +5,12 @@ const axios = require('axios');
 const apiKey = 'a66afa0ac1cc42d484989eca31f4dbff';
 
 //prepends words for Search Results
-let searchQuery = "-(coronavirus, -pandemic, -COVID)";
+let removals= "-coronavirus, -pandemic, -COVID";
 
 newsRouter.get('', async(req, res)=> {
     
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${apiKey}&pageSize=1`);
+        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals}&apiKey=${apiKey}&pageSize=1`);
         const object = newsAPI.data;
         const articles = object["articles"];
         res.render('news', { articles: articles });
@@ -18,6 +18,19 @@ newsRouter.get('', async(req, res)=> {
             console.error('Error', err.message);    
     }
 });
+
+newsRouter.post('', async(req, res)=> {
+    let searchQuery =req.body.search;
+    try {
+        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},${searchQuery}&apiKey=${apiKey}`);
+        const object = newsAPI.data;
+        const articles = object["articles"];
+        res.render('searchedNews', { articles: articles });
+    } catch (err) {
+            console.error('Error', err.message);    
+    }
+});
+
 
 module.exports = newsRouter;
 
