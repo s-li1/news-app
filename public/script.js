@@ -8,23 +8,7 @@ var topicArray = [];
 
 let numberr = 0
 
-const apiKEY = 'a66afa0ac1cc42d484989eca31f4dbff';
 
-const apiURL = `https://newsapi.org/v2/top-headlines?country=us&${apiKEY}`;
-
-async function grabNews() {
-  try {
-    const response = await fetch(apiURL);
-    
-    newsArray = await response.json();
-    
-    console.log(newsArray);      
-  } catch (error) {
-    //catch error
-  }
-}
-
-grabNews();
 function progress(){
   let articletitle = "json.whatever"
   let articletext = "also that ^"
@@ -35,6 +19,8 @@ function progress(){
   if (numberr < 5 ){
   document.getElementById("dontshowtext").innerHTML = articletext
   document.getElementById("title").innerHTML = articletitle
+  document.getElementById("cryingbecauseitssolate").style.display = "block"
+
   } else {
   document.getElementById("dontshowtext").innerHTML = "STOP READING NOW"
   document.getElementById("title").innerHTML = "RELAX"
