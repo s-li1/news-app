@@ -4,7 +4,8 @@ const axios = require('axios');
 
 const apiKey = 'a66afa0ac1cc42d484989eca31f4dbff';
 
-let searchQuery = "-coronvavirus-COVID19-pandemic";
+//prepends words for Search Results
+let searchQuery = "-(coronavirus, -pandemic, -COVID)";
 
 newsRouter.get('', async(req, res)=> {
     
