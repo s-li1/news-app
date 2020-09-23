@@ -6,11 +6,11 @@ let newsArray = [];
 
 var topicArray = [];
 
-//const apiKEY = 'a66afa0ac1cc42d484989eca31f4dbff';
+const apiKEY = 'a66afa0ac1cc42d484989eca31f4dbff';
 
-//const apiURL = `https://newsapi.org/v2/top-headlines?country=us&${apiKEY}`;
+const apiURL = `https://newsapi.org/v2/top-headlines?country=us&${apiKEY}`;
 
-/*async function grabNews() {
+async function grabNews() {
   try {
     const response = await fetch(apiURL);
     
@@ -23,7 +23,7 @@ var topicArray = [];
 }
 
 grabNews();
-*/
+
 function progress(){
   let articletitle = "json.whatever"
   let articletext = "also that ^"
@@ -63,19 +63,3 @@ function addToList(id){
     continue
   }
   */
-
-
-
-var url = 'http://newsapi.org/v2/everything?' +
-          'q=Apple&' +
-          'from=2020-09-23&' +
-          'sortBy=popularity&' +
-          'apiKey=b3b7ca609fb64e65b03dde50296adf42';
-
-var req = new Request(url);
-
-fetch(req)
-    .then(function(response) {
-        console.log(response.json());
-    })
-

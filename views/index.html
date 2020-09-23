@@ -1,52 +1,74 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A cool thing made with Glitch">
-
-    <title>Welcome to Glitch!</title>
-
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/script.js" defer></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>UTS Big Antivirus</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <header>
-      <h1>A Dream of the Future</h1>
-    </header>
+    <div id="background-container"></div>
+    <div id="app">
+      <button onclick="progress()" id="advance">
+        ➜
+      </button>
+      <div class="card">
+        <center>
+          <h1 id="title">
+            UTS NEWS
+          </h1>
+          <h4 id="dontshowtext">
+            Please don't show me:
+          </h4>
+          <div id="buttoncloud">
+            <span
+              ><button class="cloudbutton" id="1" onclick="addToList(this.id)">
+                COVID-19</button
+              ><button class="cloudbutton" id="2" onclick="addToList(this.id)">
+                Barista
+              </button></span
+            >
+            <br />
+            <span>
+              <button class="cloudbutton" id="3" onclick="addToList(this.id)">COVID-19</button>
+              <button class="cloudbutton" id="4" onclick="addToList(this.id)">US Politics</button>
+              <button class="cloudbutton" id="5" onclick="addToList(this.id)">Weather</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="6" onclick="addToList(this.id)">University</button>
+              <button class="cloudbutton" id="7" onclick="addToList(this.id)">Abortion</button>
+              <button class="cloudbutton" id="8" onclick="addToList(this.id)">Crime</button>
+              <button class="cloudbutton" id="9" onclick="addToList(this.id)">Religion</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="10" onclick="addToList(this.id)">Science</button>
+              <button class="cloudbutton" id="11" onclick="addToList(this.id)">Barista</button>
+              <button class="cloudbutton" id="12" onclick="addToList(this.id)">Surgery</button>
+              <button class="cloudbutton" id="13" onclick="addToList(this.id)">Death</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="14" onclick="addToList(this.id)">School</button>
+              <button class="cloudbutton" id="15" onclick="addToList(this.id)">Poetry</button>
+              <button class="cloudbutton" id="16" onclick="addToList(this.id)">BRM</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="17" onclick="addToList(this.id)">Cats</button>
+              <button class="cloudbutton" id="18" onclick="addToList(this.id)">Heights</button>
+            </span>
+          </div>
+        </center>
+      </div>
+    </div>
 
-    <main>
-      <h2>Oh hi,</h2>
-
-      <p>Tell me your hopes and dreams:</p>
-
-      <form>
-        <label>
-          New Dream
-          <input name="dream" type="text" maxlength="100" required placeholder="Dreams!">
-        </label>
-        <button type="submit" id="submit-dream">Add Dream</button>
-      </form>
-
-      <section class="dreams">
-        <ul id="dreams">
-          <em>loading dreams&hellip;</em>
-        </ul>
-      </section>
-    </main>
-
-    <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:2em;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
+    <script src="/script.js"></script>
   </body>
 </html>
