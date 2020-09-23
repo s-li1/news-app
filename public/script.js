@@ -44,4 +44,11 @@ function addToList(id){
   console.log(`${id} ${topicArray}`)
 }
 
-//A
+//Add Button Event Listener to all button elements
+
+for (var j = 0 ; j < button.length; j++) {
+   button[i].addEventListener('click' , function() {
+     console.log("hello")
+       document.getElementById("cryingbecauseitssolate").style.display = "block";
+   }) ; 
+}
