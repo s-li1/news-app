@@ -10,7 +10,7 @@ let removals= "-coronavirus, -pandemic, -COVID";
 newsRouter.get('', async(req, res)=> {
     
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals}&apiKey=${apiKey}&pageSize=1`);
+        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
         const object = newsAPI.data;
         const articles = object["articles"];
         res.render('news', { articles: articles });
@@ -20,9 +20,9 @@ newsRouter.get('', async(req, res)=> {
 });
 
 newsRouter.post('', async(req, res)=> {
-    let searchQuery =req.body.search;
+    let searchQuery = req.body.search;
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},${searchQuery}&apiKey=${apiKey}`);
+        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},${searchQuery}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
         const object = newsAPI.data;
         const articles = object["articles"];
         res.render('searchedNews', { articles: articles });

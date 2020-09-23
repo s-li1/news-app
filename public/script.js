@@ -48,7 +48,6 @@ function addToList(id){
 
 for (var j = 0 ; j < button.length; j++) {
    button[i].addEventListener('click' , function() {
-     console.log("hello")
-       document.getElementById("cryingbecauseitssolate").style.display = "block";
+
    }) ; 
 }
