@@ -95,3 +95,7 @@ width: 50%;
 #title {
   padding: 5%;
 }
+
+#newsText {
+  display: hidden;
+}

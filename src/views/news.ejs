@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>UTS Big Antivirus</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="background-container"></div>
+    <div id="app">
+      <button onclick="progress()" id="advance">
+        ➜
+      </button>
+      <div class="card">
+        <center>
+        <div class="wrapper" id = "newstext">
+        <div class="newsclass">
+            <% articles.forEach(function(article, index) { %> 
+                <div class="card">
+                    <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
+                    <div class="container">
+                        <h4><%- article.title %></h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores atque eveniet quo aliquid officia repellendus sed ipsa voluptatum porro nemo illum quia tenetur reiciendis, delectus qui quidem exercitationem voluptate pariatur!</p>
+
+                    </div>
+                </div>
+            <% }) %> 
+        </div>
+    </div>
+          <h1 id="title">
+            UTS NEWS
+          </h1>
+          <h4 id="dontshowtext">
+            Please don't show me:
+          </h4>
+          <div id="buttoncloud">
+            <span
+              ><button class="cloudbutton" id="1" onclick="addToList(this.id)">
+                COVID-19</button
+              ><button class="cloudbutton" id="2" onclick="addToList(this.id)">
+                Barista
+              </button></span
+            >
+            <br />
+            <span>
+              <button class="cloudbutton" id="3" onclick="addToList(this.id)">COVID-19</button>
+              <button class="cloudbutton" id="4" onclick="addToList(this.id)">US Politics</button>
+              <button class="cloudbutton" id="5" onclick="addToList(this.id)">Weather</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="6" onclick="addToList(this.id)">University</button>
+              <button class="cloudbutton" id="7" onclick="addToList(this.id)">Abortion</button>
+              <button class="cloudbutton" id="8" onclick="addToList(this.id)">Crime</button>
+              <button class="cloudbutton" id="9" onclick="addToList(this.id)">Religion</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="10" onclick="addToList(this.id)">Science</button>
+              <button class="cloudbutton" id="11" onclick="addToList(this.id)">Barista</button>
+              <button class="cloudbutton" id="12" onclick="addToList(this.id)">Surgery</button>
+              <button class="cloudbutton" id="13" onclick="addToList(this.id)">Death</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="14" onclick="addToList(this.id)">School</button>
+              <button class="cloudbutton" id="15" onclick="addToList(this.id)">Poetry</button>
+              <button class="cloudbutton" id="16" onclick="addToList(this.id)">BRM</button>
+            </span>
+            <br />
+            <span>
+              <button class="cloudbutton" id="17" onclick="addToList(this.id)">Cats</button>
+              <button class="cloudbutton" id="18" onclick="addToList(this.id)">Heights</button>
+            </span>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

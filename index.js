@@ -32,6 +32,7 @@ function progress(){
   }
   document.getElementById("dontshowtext").innerHTML = articletext
   document.getElementById("title").innerHTML = articletitle
+  document.getElementById(newsText).style.display = "block"
 }
 
 

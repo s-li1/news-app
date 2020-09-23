@@ -53,7 +53,6 @@ function addToList(id){
   }
   console.log(`${id} ${topicArray}`)
 }
-let i = 0
 
 let newsArray = [];
 
