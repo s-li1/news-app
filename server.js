@@ -1,34 +1,28 @@
-// server.js
-// where your node app starts
-
-// we've started you off with Express (https://expressjs.com/)
-// but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
+
 const app = express();
 
-// our default array of dreams
-const dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
-];
+const port = 8000;
 
-// make all the files in 'public' available
-// https://expressjs.com/en/starter/static-files.html
-app.use(express.static("public"));
+//Static Files
+app.use(express.static('public'));
 
-// https://expressjs.com/en/starter/basic-routing.html
-app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/views/index.html");
-});
+//Creates a middleware function to serve files from within a given root directory
+app.use('/css', express.static(__dirname + 'public/css'));
+app.use('/images', express.static(__dirname + 'public/images'));
+app.use('/js', express.static(__dirname + 'public/js'));
 
-// send the default array of dreams to the webpage
-app.get("/dreams", (request, response) => {
-  // express helps us take JS objects and send them as JSON
-  response.json(dreams);
-});
 
-// listen for requests :)
-const listener = app.listen(process.env.PORT, () => {
-  console.log("Your app is listening on port " + listener.address().port);
+//Templating Engine
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
+
+//Routes 
+const newsRouter = require('./src/routes/news'); //gets news.js file
+
+app.use('/', newsRouter);
+
+//Listen on port 8000
+app.listen (port, ()=> {
+    console.log(`Listening on port ${port}`);
 });
