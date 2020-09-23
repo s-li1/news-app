@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_Logo">COVIDLESS NEWS</div>
+        <div class="header_Search">Search</div>
+    </header>
+    <h1>News</h1>
+
+    <div class="wrapper">
+        <div class="newsclass">
+            <% articles.forEach(function(article, index) { %> 
+                <div class="card">
+                    <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
+                    <div class="container">
+                        <h4><%- article.title %></h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores atque eveniet quo aliquid officia repellendus sed ipsa voluptatum porro nemo illum quia tenetur reiciendis, delectus qui quidem exercitationem voluptate pariatur!</p>
+                    </div>
+                </div>
+            <% }) %> 
+        </div>
+    </div>
+    
+</body>
+</html>
