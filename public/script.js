@@ -1,13 +1,10 @@
 let number = 0
-
 let i = 0
-
 let newsArray = [];
-
 var topicArray = [];
-
 let numberr = 0
 
+let button = document.getElementsByClassName("cloudbutton");
 
 function progress(){
   let articletitle = "json.whatever"
@@ -47,3 +44,4 @@ function addToList(id){
   console.log(`${id} ${topicArray}`)
 }
 
+//A
