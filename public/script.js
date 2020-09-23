@@ -47,12 +47,3 @@ function addToList(id){
   console.log(`${id} ${topicArray}`)
 }
 
-/*
-  for (var i = 0; i <= topicArray.length; i++){
-    if (topicArray[i] = topicName){
-      topicBool = true
-      break
-  } else {
-    continue
-  }
-  */

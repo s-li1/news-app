@@ -21,11 +21,11 @@
             <div class="wrapper">
         <div class="newsclass" id = "cryingbecauseitssolate">
             <% articles.forEach(function(article, index) { %> 
-                <a href="<%-article.url%>" class="news-card" target="_blank">
+                <a href="<%-article.url%>" target="_blank" class="news-card" >
                     <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
                     <div class="container">
                         <h4><%- article.title %></h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores atque eveniet quo aliquid officia repellendus sed ipsa voluptatum porro nemo illum quia tenetur reiciendis, delectus qui quidem exercitationem voluptate pariatur!</p>
+                        <p><%- article.description %> </p>
 
                     </div>
                 </a>
