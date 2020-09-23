@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <title>UTS Big Antivirus</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <div id="background-container"></div>
@@ -18,11 +18,10 @@
         ➜
       </button>
       <div class="card">
-        <center>
-        <div class="wrapper" id = "newstext">
+            <div class="wrapper">
         <div class="newsclass">
             <% articles.forEach(function(article, index) { %> 
-                <div class="card">
+                <div class="news-card">
                     <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
                     <div class="container">
                         <h4><%- article.title %></h4>
@@ -33,6 +32,7 @@
             <% }) %> 
         </div>
     </div>
+        <center>
           <h1 id="title">
             UTS NEWS
           </h1>
@@ -82,6 +82,9 @@
         </center>
       </div>
     </div>
+    
+    
+    
 
     <script src="/script.js"></script>
   </body>

@@ -96,6 +96,6 @@ width: 50%;
   padding: 5%;
 }
 
-#newsText {
-  display: hidden;
+#newstext {
+  display: none;
 }
