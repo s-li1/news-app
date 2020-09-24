@@ -12,7 +12,7 @@ let removals= "-coronavirus, -pandemic, -COVID";
 newsRouter.get('', async(req, res)=> {
     
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
+        const newsAPI = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&pageSize=1`);
         const object = newsAPI.data;
         const articles = object["articles"];
         res.render('news', { articles: articles });
@@ -20,6 +20,8 @@ newsRouter.get('', async(req, res)=> {
             console.error('Error', err.message);    
     }
 });
+
+
 
 newsRouter.post('/results', async(req, res)=> {
     let searchQuery = req.body.search;

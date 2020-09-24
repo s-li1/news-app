@@ -24,11 +24,12 @@
   <div class="container">
       <div id="background-container"></div>
       <div id="app">
-        <button onclick="progress()" id="advance">
+        <button onclick="progress()" id="advance" name="new" type="submit" formmethod="get" formaction="/">
           ➜
         </button>
-
+     
      <div class="card">
+       <h1 id="title">UTS NEWS</h1>
         <div class="wrapper">
           <div class="newsclass1">
               <% articles.forEach(function(article, index) { %> 
@@ -44,7 +45,7 @@
           </div>
         </div>
       <center>
-      <h1 id="title">UTS NEWS</h1>
+     
         <div id = "searchbox">
           <h4 id="dontshowtext">Alternatively, </h4>
           <header>   
