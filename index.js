@@ -30,8 +30,8 @@ function progress(){
   for (var i = 1; i <= 18; i++){
   document.getElementById(i).style.display = "none"
   }
-  document.getElementById("dontshowtext").innerHTML = articletext
-  document.getElementById("title").innerHTML = articletitle
+  document.getElementById("dontshowtext").innerHTML = "<%- article.description %>"
+  document.getElementById("title").innerHTML = "<%- article.title %>"
   document.getElementById().style.display = "block"
 }
 
