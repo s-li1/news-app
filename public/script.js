@@ -5,16 +5,13 @@ var topicArray = [];
 let numberr = 0
 
 let button = document.getElementsByClassName("cloudbutton");
+let advanceButton = document.getElementById("advance")
 function progress(){
-  let articletitle = "json.whatever"
-  let articletext = "also that ^"
   for (var i = 1; i <= 18; i++){
   document.getElementById(i).style.display = "none"
   }
   numberr++
   if (numberr < 5 ){
-  document.getElementById("dontshowtext").innerHTML = articletext
-  document.getElementById("title").innerHTML = articletitle
   document.getElementById("cryingbecauseitssolate").style.display = "block"
 
   } else {
@@ -50,3 +47,4 @@ for (var j = 0 ; j < button.length; j++) {
        document.getElementById("cryingbecauseitssolate").style.display = "block";
    }) ; 
 }
+

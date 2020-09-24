@@ -29,12 +29,12 @@
         </button>
 
      <div class="card">
-      <div class="wrapper">
+        <div class="wrapper">
           <div class="newsclass" id = "cryingbecauseitssolate">
               <% articles.forEach(function(article, index) { %> 
                   <a href="<%-article.url%>" target="_blank" class="news-card" >
                       <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
-                      <div class="container">
+                      <div class="news-container">
                           <h4><%- article.title %></h4>
                           <p><%- article.description %> </p>
 
@@ -42,7 +42,8 @@
                   </a>
               <% }) %> 
           </div>
-      </div>
+        </div>
+       
 
       <center>
       <h1 id="title">UTS NEWS</h1>
@@ -87,7 +88,7 @@
         <div id = "searchbox">
           <h4 id="dontshowtext">Alternatively, </h4>
           <header>   
-            <form action="/results" method="POST">
+            <form action="/" method="POST">
                 <input type="text" name="search" placeholder="Search for news" required>
                 <input type="submit">
             </form>
@@ -97,6 +98,8 @@
         
         </center>
       </div>
+        
+        
     </div>
   </div>
     

@@ -32,7 +32,7 @@ width: 50%;
 #advance {
   border: none;
   background-color: white;
-  color: #FCD5CE;
+  color: #34495e;
   padding: 10px;
   font-size: 150%;
   height: 100%;
@@ -44,8 +44,8 @@ width: 50%;
 #advance:hover {
   transition: 0.2s;
   border: none;
-  background-color: #ffccbc;
-  color: white;
+  background-color: #95a5a6;
+  color: black;
   padding: 10px;
   font-size: 150%;
   height: 100%;
@@ -123,6 +123,10 @@ width: 50%;
 
 .container {
     padding: 10px 16px;
+}
+
+.news-container {
+  padding: 10px 5px;
 }
 
 #searchbox{
