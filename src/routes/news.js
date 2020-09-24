@@ -32,10 +32,10 @@ newsRouter.post('/results', async(req, res)=> {
 });
 
 
-newsRouter.post('/:category', async(req, res)=> {
-    let searchQuery = req.body.search;
+newsRouter.post('', async(req, res)=> {
+    let category = req.body.category;
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},+${searchQuery}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
+        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},+${category}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
         const object = newsAPI.data;
         const articles = object["articles"];
         res.render('searchedNews', { articles: articles });
