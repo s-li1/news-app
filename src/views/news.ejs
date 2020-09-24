@@ -25,43 +25,38 @@
         <input type="submit">
     </form>
     </header>
-    <div id="background-container"></div>
-    <div id="app">
-      <button onclick="progress()" id="advance">
-        ➜
-      </button>
-   
-   <div class="card">
-    <div class="wrapper">
-        <div class="newsclass" id = "cryingbecauseitssolate">
-            <% articles.forEach(function(article, index) { %> 
-                <a href="<%-article.url%>" target="_blank" class="news-card" >
-                    <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
-                    <div class="container">
-                        <h4><%- article.title %></h4>
-                        <p><%- article.description %> </p>
-
-                    </div>
-                </a>
-            <% }) %> 
-        </div>
-    </div>
     
-        <center>
-          <h1 id="title">
-            UTS NEWS
-          </h1>
-          <h4 id="dontshowtext">
-            Please don't show me:
-          </h4>
-          <div id="buttoncloud">
-            <span
-              ><button class="cloudbutton" id="1" onclick="addToList(this.id)">
-                COVID-19</button
-              ><button class="cloudbutton" id="2" onclick="addToList(this.id)">
-                Barista
-              </button></span
-            >
+  <div class="container">
+      <div id="background-container"></div>
+      <div id="app">
+        <button onclick="progress()" id="advance">
+          ➜
+        </button>
+
+     <div class="card">
+      <div class="wrapper">
+          <div class="newsclass" id = "cryingbecauseitssolate">
+              <% articles.forEach(function(article, index) { %> 
+                  <a href="<%-article.url%>" target="_blank" class="news-card" >
+                      <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
+                      <div class="container">
+                          <h4><%- article.title %></h4>
+                          <p><%- article.description %> </p>
+
+                      </div>
+                  </a>
+              <% }) %> 
+          </div>
+      </div>
+
+      <center>
+      <h1 id="title">UTS NEWS</h1>
+      <h4 id="dontshowtext">Please don't show me:</h4>
+        <div id="buttoncloud">
+          <span>
+            <button class="cloudbutton" id="1" onclick="addToList(this.id)">COVID-19</button>
+            <button class="cloudbutton" id="2" onclick="addToList(this.id)">Barista</button>
+          </span>
             <br />
             <span>
               <button class="cloudbutton" id="3" onclick="addToList(this.id)">COVID-19</button>
@@ -97,6 +92,8 @@
         </center>
       </div>
     </div>
+  </div>
+    
     
     
     
