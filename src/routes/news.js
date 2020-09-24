@@ -32,19 +32,5 @@ newsRouter.post('/results', async(req, res)=> {
 });
 
 
-newsRouter.post('', async(req, res)=> {
-    let category = req.body.category;
-    try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},+${category}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
-        const object = newsAPI.data;
-        const articles = object["articles"];
-        res.render('searchedNews', { articles: articles });
-    } catch (err) {
-            console.error('Error', err.message);    
-    }
-});
-
-
-
 module.exports = newsRouter;
 
