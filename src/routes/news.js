@@ -35,12 +35,5 @@ newsRouter.post('/results', async(req, res)=> {
 
 
 
-
- newsRouter.get('',(req,res)=>{
-     getNews(req,res);
- });
-
-
-
 module.exports = newsRouter;
 

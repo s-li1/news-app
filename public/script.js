@@ -5,7 +5,6 @@ var topicArray = [];
 let numberr = 0
 
 let button = document.getElementsByClassName("cloudbutton");
-
 function progress(){
   let articletitle = "json.whatever"
   let articletext = "also that ^"
