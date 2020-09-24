@@ -126,3 +126,17 @@ width: 50%;
 .container {
     padding: 10px 16px;
 }
+
+#searchbox{
+  
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: white;
+  height: 10%;
+  width: 40%;
+  min-width: 410px;
+}
