@@ -22,14 +22,16 @@
 
     
   <div class="container">
+      
       <div id="background-container"></div>
       <div id="app">
-        <button id="advance" name="new" type="submit" formmethod="get" formaction="/next">
-          <a href="/next">➜</a>
+        <button onclick="progress()" id="advance" name="new" type="submit" formmethod="get" formaction="/">
+          ➜
         </button>
 
      <div class="card">
         <div class="wrapper">
+          <h1 id="title">UTS NEWS</h1>
           <div class="newsclass" id = "cryingbecauseitssolate">
               <% articles.forEach(function(article, index) { %> 
                   <a href="<%-article.url%>" target="_blank" class="news-card" >
@@ -46,8 +48,7 @@
        
 
       <center>
-      <h1 id="title">UTS NEWS</h1>
-      <h4 id="dontshowtext">Please don't show me:</h4>
+     
         <div id="buttoncloud">
           <span>
             <button class="cloudbutton" id="1" onclick="addToList(this.id)">COVID-19</button>

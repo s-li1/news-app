@@ -12,6 +12,7 @@ function progress(){
   }
   numberr++
   if (numberr < 5 ){
+
   document.getElementById("cryingbecauseitssolate").style.display = "block"
 
   } else {
