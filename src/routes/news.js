@@ -21,6 +21,19 @@ newsRouter.get('', async(req, res)=> {
     }
 });
 
+newsRouter.get('/next', async(req, res)=> {
+    
+    try {
+        const newsAPI = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&pageSize=10`);
+        const object = newsAPI.data;
+        const articles = object["articles"];
+        res.render('next', { articles: articles });
+    } catch (err) {
+            console.error('Error', err.message);    
+    }
+});
+
+
 
 
 newsRouter.post('/results', async(req, res)=> {
