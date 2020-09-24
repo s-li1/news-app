@@ -6,6 +6,7 @@ const apiKey = 'a66afa0ac1cc42d484989eca31f4dbff';
 
 //prepends words for Search Results
 let removals= "-coronavirus, -pandemic, -COVID";
+let domNews=require('news');
 
 
 newsRouter.get('', async(req, res)=> {
@@ -31,6 +32,14 @@ newsRouter.post('/results', async(req, res)=> {
             console.error('Error', err.message);    
     }
 });
+
+
+
+
+ newsRouter.get('',(req,res)=>{
+     getNews(req,res);
+ });
+
 
 
 module.exports = newsRouter;
