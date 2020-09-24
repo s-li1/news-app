@@ -12,18 +12,20 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+    <header>   
+    <form action="/results" method="POST">
+        <input type="text" name="search" placeholder="Search for news" required>
+        <input type="submit">
+    </form>
+    </header>
     <div id="background-container"></div>
     <div id="app">
       <button onclick="progress()" id="advance">
         ➜
       </button>
-      
-    <form action="/" method="POST">
-        <input type="text" name="search" placeholder="Search for news" required>
-        <input type="submit" value="Search">
-    </form>
-      <div class="card">
-            <div class="wrapper">
+   
+   <div class="card">
+    <div class="wrapper">
         <div class="newsclass" id = "cryingbecauseitssolate">
             <% articles.forEach(function(article, index) { %> 
                 <a href="<%-article.url%>" target="_blank" class="news-card" >
@@ -37,6 +39,7 @@
             <% }) %> 
         </div>
     </div>
+    
         <center>
           <h1 id="title">
             UTS NEWS
@@ -54,7 +57,7 @@
             >
             <br />
             <span>
-              <button class="cloudbutton" id="3" onclick="addToList(this.id)">COVID-19</button>
+              <button name="category" type="submit" class="cloudbutton" id="3" onclick="addToList(this.id)">COVID-19</button>
               <button class="cloudbutton" id="4" onclick="addToList(this.id)">US Politics</button>
               <button class="cloudbutton" id="5" onclick="addToList(this.id)">Weather</button>
             </span>

@@ -13,25 +13,27 @@
     </header>
     <h1>News</h1>
 
-    <form action="/" method="POST">
+    <form action="/results" method="POST">
         <input type="text" name="search" placeholder="Search for news" required>
         <input type="submit" value="Search">
     </form>
     
-    <div class="wrapper">
-        <div class="newsclass">
+   <div class="card">
+      <div class="wrapper">
+        <div class="newsclass" id = "cryingbecauseitssolate">
             <% articles.forEach(function(article, index) { %> 
-                <div class="card">
+                <a href="<%-article.url%>" target="_blank" class="news-card" >
                     <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
                     <div class="container">
                         <h4><%- article.title %></h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores atque eveniet quo aliquid officia repellendus sed ipsa voluptatum porro nemo illum quia tenetur reiciendis, delectus qui quidem exercitationem voluptate pariatur!</p>
+                        <p><%- article.description %> </p>
 
                     </div>
-                </div>
+                </a>
             <% }) %> 
         </div>
+       </div>
     </div>
-    
+
 </body>
 </html>

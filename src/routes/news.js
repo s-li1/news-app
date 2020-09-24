@@ -19,10 +19,10 @@ newsRouter.get('', async(req, res)=> {
     }
 });
 
-newsRouter.post('', async(req, res)=> {
+newsRouter.post('/results', async(req, res)=> {
     let searchQuery = req.body.search;
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},${searchQuery}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
+        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},+${searchQuery}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
         const object = newsAPI.data;
         const articles = object["articles"];
         res.render('searchedNews', { articles: articles });
@@ -30,6 +30,20 @@ newsRouter.post('', async(req, res)=> {
             console.error('Error', err.message);    
     }
 });
+
+
+newsRouter.post('/:category', async(req, res)=> {
+    let searchQuery = req.body.search;
+    try {
+        const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${removals},+${searchQuery}&apiKey=${apiKey}&pageSize=1&sortBy=popularity`);
+        const object = newsAPI.data;
+        const articles = object["articles"];
+        res.render('searchedNews', { articles: articles });
+    } catch (err) {
+            console.error('Error', err.message);    
+    }
+});
+
 
 
 module.exports = newsRouter;
