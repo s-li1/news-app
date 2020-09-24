@@ -140,3 +140,14 @@ width: 50%;
   width: 40%;
   min-width: 410px;
 }
+
+
+.header{
+  position: fixed;
+  width: 100%;
+  height: 20%;
+  background-colour: white;
+  border: black;
+  
+  
+}
