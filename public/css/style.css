@@ -108,13 +108,6 @@ width: 50%;
     margin-bottom: 10px;
 }
 
-.newsclass {
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    grid-gap: 2rem;
-    display: none;
-}
-
 .newsclass1 {
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));

@@ -4,23 +4,21 @@
   "//3": "updating this file will download and update your packages",
   "name": "hello-express",
   "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "description": "A simple News app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "bootstrap": "^4.5.2"
+    "nodemon": "^2.0.6"
   },
   "engines": {
     "node": "12.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
   },
   "license": "MIT",
   "keywords": [

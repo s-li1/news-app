@@ -29,11 +29,22 @@
           ➜
         </button>
 
+       
+
      <div class="card">
         <div class="wrapper">
           <h1 id="title">UTS NEWS</h1>
+
+          <%
+          const { totalPages, pageSize, articles } = news;
+          const pages = Math.floor(totalPages / pageSize);
+          const pagination = new Array(pages).fill(0).map((_, index) => index);
+          pagination.forEach(page => { 
+            const className = (query.page == page + 1) ? 'active' : 'passive'; %>
+            <a class="<%= className %>" href='/news?page=<%= page + 1 %>'><%= page + 1 %></a>
+        <% }); %>
           <div class="newsclass" id = "cryingbecauseitssolate">
-              <% articles.forEach(function(article, index) { %> 
+              <% articles.forEach((article, index) => { %> 
                   <a href="<%-article.url%>" target="_blank" class="news-card" >
                       <img src="<%- article.urlToImage %>" alt="<%- article.title %>" style="width:100%">
                       <div class="news-container">
@@ -48,44 +59,7 @@
        
 
       <center>
-     
-        <div id="buttoncloud">
-          <span>
-            <button class="cloudbutton" id="1" onclick="addToList(this.id)">COVID-19</button>
-            <button class="cloudbutton" id="2" onclick="addToList(this.id)">Barista</button>
-          </span>
-            <br />
-            <span>
-              <button class="cloudbutton" id="3" onclick="addToList(this.id)">COVID-19</button>
-              <button class="cloudbutton" id="4" onclick="addToList(this.id)">US Politics</button>
-              <button class="cloudbutton" id="5" onclick="addToList(this.id)">Weather</button>
-            </span>
-            <br />
-            <span>
-              <button class="cloudbutton" id="6" onclick="addToList(this.id)">University</button>
-              <button class="cloudbutton" id="7" onclick="addToList(this.id)">Abortion</button>
-              <button class="cloudbutton" id="8" onclick="addToList(this.id)">Crime</button>
-              <button class="cloudbutton" id="9" onclick="addToList(this.id)">Religion</button>
-            </span>
-            <br />
-            <span>
-              <button class="cloudbutton" id="10" onclick="addToList(this.id)">Science</button>
-              <button class="cloudbutton" id="11" onclick="addToList(this.id)">Barista</button>
-              <button class="cloudbutton" id="12" onclick="addToList(this.id)">Surgery</button>
-              <button class="cloudbutton" id="13" onclick="addToList(this.id)">Death</button>
-            </span>
-            <br />
-            <span>
-              <button class="cloudbutton" id="14" onclick="addToList(this.id)">School</button>
-              <button class="cloudbutton" id="15" onclick="addToList(this.id)">Poetry</button>
-              <button class="cloudbutton" id="16" onclick="addToList(this.id)">BRM</button>
-            </span>
-            <br />
-            <span>
-              <button class="cloudbutton" id="17" onclick="addToList(this.id)">Cats</button>
-              <button class="cloudbutton" id="18" onclick="addToList(this.id)">Heights</button>
-            </span>
-          </div>
+        
         <div id = "searchbox">
           <h4 id="dontshowtext">Alternatively, </h4>
           <header>   

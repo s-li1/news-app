@@ -8,18 +8,31 @@ const apiKey = 'a66afa0ac1cc42d484989eca31f4dbff';
 let removals= "-coronavirus, -pandemic, -COVID";
 
 
+let totalPages;
+const maxPages = 100;
+const pageSize = 1;
+const baseUrl = 'https://newsapi.org/v2/top-headlines?country=au';
 
-newsRouter.get('', async(req, res)=> {
-    
+
+const goToNews = async (req, res) => {
     try {
-        const newsAPI = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&pageSize=1`);
-        const object = newsAPI.data;
-        const articles = object["articles"];
-        res.render('news', { articles: articles });
+        const { page = 1 } = req.query;
+        const response = await axios.get(`${baseUrl}&apiKey=${apiKey}&pageSize=${pageSize}&page=${page}&apiKey=${apiKey}`);
+        const news = response.data;
+        totalPages = news.totalResults < maxPages ? news.totalResults : maxPages;
+        res.locals.news = {
+            articles: news.articles,
+            totalPages,
+            pageSize
+        }
+        res.render('news', { articles: news.articles });
     } catch (err) {
-            console.error('Error', err.message);    
+        console.error('Error', err.message);    
     }
-});
+}
+
+newsRouter.get('/news', goToNews);
+
 
 
 newsRouter.post('/results', async(req, res)=> {
@@ -33,6 +46,7 @@ newsRouter.post('/results', async(req, res)=> {
             console.error('Error', err.message);    
     }
 });
+
 
 
 
