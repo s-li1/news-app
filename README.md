@@ -1,30 +1,12 @@
-# hello-express
+# News App
 
-A server that serves a webpage, its resources, and some data
-
-
-## Your Project
-
-On the front-end,
-
-- Edit `views/index.html` to change the content of the webpage
-- `public/client.js` is the javacript that runs when you load the webpage
-- `public/style.css` is the styles for `views/index.html`
-- Drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy.
+Too much news can be stressful. This news app aims to provide one single article at a time. Tired of hearing COVID19? This app will remove the noises and let you see only what you want. This app fetches news articles using the NEWS API and was made with Node JS Express 
 
 
-## Made by [Glitch](https://glitch.com/)
+## Get Started
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-( ᵔ ᴥ ᵔ )
+```
+git clone https://github.com/s-li1/news-app.git
+npm install
+npm start
+```
